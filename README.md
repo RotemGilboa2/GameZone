@@ -57,7 +57,7 @@ Every user in GameZone creates a personal gaming profile that represents them in
 GameZone was built using modern Android development tools and architecture principles.
 
 * **Language:** Kotlin
-* **Architecture:** Modular Android architecture based on **MVVM**, with clear separation between the UI layer (Activities & Fragments), business logic (ViewModels), and the data layer (FirestoreService & Firebase).
+* **Architecture:** Modular Android architecture following the **MVVM approach with a Repository layer**, separating UI components (Activities & Fragments), data management (Repositories), and database access (FirestoreService with Firebase).
 * **Backend:** Firebase
 
 **Main Technologies:**
