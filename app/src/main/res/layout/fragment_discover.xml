@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="@dimen/space_16">
+
+    <TextView
+        android:id="@+id/discover_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discover_title"
+        android:textSize="@dimen/text_top"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/discover_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discover_subtitle"
+        android:textColor="@color/text_muted"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/discover_title" />
+
+    <EditText
+        android:id="@+id/discover_et_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/discover_search_height"
+        android:layout_marginTop="@dimen/space_24"
+        android:background="@drawable/bg_search_field"
+        android:hint="@string/discover_search_hint"
+        android:textColorHint="@color/text_muted"
+        android:textColor="@color/text_primary"
+        android:paddingStart="@dimen/space_16"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="@dimen/space_12"
+        app:layout_constraintTop_toBottomOf="@id/discover_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/discover_til_game"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_12"
+        android:hint="@string/discover_favorite_game_hint"
+        app:boxStrokeColor="@color/card_inner"
+        app:hintTextColor="@color/text_muted"
+        app:layout_constraintTop_toBottomOf="@id/discover_et_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/discover_btn_clear_game"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/discover_et_game"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/discover_dropdown_height"
+            android:inputType="none"
+            android:focusable="false"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted"
+            android:paddingStart="@dimen/space_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/discover_btn_clear_game"
+        android:layout_width="@dimen/clear_btn_size"
+        android:layout_height="@dimen/clear_btn_size"
+        android:layout_marginStart="@dimen/default_card_margin"
+        android:layout_marginTop="@dimen/space_12"
+        android:padding="0dp"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:gravity="center"
+        android:text=""
+        app:icon="@drawable/ic_close"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/text_primary"
+        app:iconSize="@dimen/clear_btn_icon"
+        app:backgroundTint="@color/card_inner"
+        app:cornerRadius="@dimen/clear_btn_corner"
+        app:rippleColor="@color/nav_selected"
+        app:layout_constraintTop_toBottomOf="@id/discover_et_search"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/discover_lbl_suggested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discover_suggested_players"
+        android:textColor="@color/text_muted"
+        android:textSize="12sp"
+        android:layout_marginTop="@dimen/space_18"
+        app:layout_constraintTop_toBottomOf="@id/discover_til_game"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/discover_lbl_found_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discover_found_count"
+        android:textColor="@color/nav_selected"
+        android:textSize="@dimen/text_subtitle"
+        app:layout_constraintTop_toTopOf="@id/discover_lbl_suggested"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/discover_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_12"
+        app:layout_constraintTop_toBottomOf="@id/discover_lbl_suggested"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

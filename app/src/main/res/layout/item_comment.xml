@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_card_margin"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="0dp"
+    app:strokeWidth="@dimen/stroke_thin"
+    app:strokeColor="@color/card_stroke_soft"
+    app:cardBackgroundColor="@color/card_dark"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_14">
+
+        <ImageView
+            android:id="@+id/commentImgAvatar"
+            android:layout_width="@dimen/comment_avatar_size"
+            android:layout_height="@dimen/comment_avatar_size"
+            android:src="@drawable/logo"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/commentLblName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/default_username"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_15"
+            android:textColor="@color/text_primary"
+            android:layout_marginStart="@dimen/default_card_margin"
+            app:layout_constraintStart_toEndOf="@+id/commentImgAvatar"
+            app:layout_constraintTop_toTopOf="@+id/commentImgAvatar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/commentLblTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/comment_time_placeholder"
+            android:textSize="@dimen/text_11"
+            android:textColor="@color/text_white_60"
+            android:layout_marginStart="@dimen/default_card_margin"
+            android:layout_marginTop="@dimen/space_xs"
+            app:layout_constraintStart_toEndOf="@+id/commentImgAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/commentLblName"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/commentLblText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/comment_placeholder"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/text_white_90"
+            android:lineSpacingExtra="@dimen/line_spacing_small"
+            android:layout_marginTop="@dimen/default_card_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/commentImgAvatar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

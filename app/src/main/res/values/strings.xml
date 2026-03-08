@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">GameZone</string>
+    <string name="storage">Storage</string>
+    <string name="send">Send</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_out"><u>Sign out</u></string>
+
+    <string name="default_username">Player</string>
+
+    <string name="login_error_failed">Error: Failed logging in!</string>
+    <string name="login_failed_no_user">Login failed: no user</string>
+    <string name="login_failed_load_profile">Failed loading user profile</string>
+
+    <string name="login_welcome_back">Welcome back, %1$s 👋</string>
+    <string name="login_welcome_new">Welcome, %1$s 🎮</string>
+
+    <string name="login_firestore_error">Firestore error: %1$s</string>
+
+    <string name="chat_open_failed">Chat open failed</string>
+    <string name="chat_send_failed">Send failed: %1$s</string>
+
+    <string name="chat_status_online">● Online</string>
+    <string name="chat_status_offline">Offline</string>
+    <string name="chat_last_seen">Last seen %1$s</string>
+
+    <string name="error_not_logged_in">Not logged in</string>
+    <string name="error_loading_chats">Failed loading chats</string>
+    <string name="error_save_failed">Save failed: %1$s</string>
+
+    <string name="discover_error_searching_users">Error searching users</string>
+    <string name="discover_found_count">%1$d found</string>
+    <string name="discover_request_sent">Request sent to %1$s</string>
+    <string name="discover_request_failed">Request failed: %1$s</string>
+
+    <string name="comments_title">Comments</string>
+    <string name="comments_failed_to_comment">Failed to comment: %1$s</string>
+
+    <string name="time_just_now">just now</string>
+    <string name="time_minutes_ago">%1$d min ago</string>
+    <string name="time_hours_ago">%1$d hour ago</string>
+    <string name="time_days_ago">%1$d day ago</string>
+
+    <string name="home_new_post_title">New Post</string>
+    <string name="home_new_post_hint">Write something...</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_post">Post</string>
+    <string name="home_failed_to_post">Failed to post</string>
+    <string name="home_like_failed">Like failed</string>
+
+    <string name="profile_failed_load">Failed to load profile</string>
+
+    <string name="dialog_favorite_games_title">Favorite Games (up to %1$d)</string>
+    <string name="profile_favorite_games_limit">You can select up to %1$d games</string>
+    <string name="profile_favorite_games_updated">Favorite games updated ✅</string>
+
+
+    <string name="dialog_games_count_title">Games Count</string>
+    <string name="dialog_games_count_hint">Enter games count</string>
+    <string name="profile_invalid_number">Please enter a valid number</string>
+    <string name="logout_failed">Logout failed</string>
+
+    <string name="profile_setup_limit_games">You can select up to %1$d games</string>
+    <string name="profile_setup_username_required">Username is required</string>
+    <string name="profile_setup_select_one_game">Select at least 1 game</string>
+    <string name="region_selected_prefix">✓  %1$s</string>
+
+    <string name="squad_empty_friends">No friends yet</string>
+    <string name="squad_empty_requests">No requests yet</string>
+
+    <string name="squad_failed_loading_friends">Failed loading friends: %1$s</string>
+    <string name="squad_failed_loading_requests">Failed loading requests: %1$s</string>
+    <string name="squad_accept_failed">Accept failed: %1$s</string>
+    <string name="squad_decline_failed">Decline failed: %1$s</string>
+
+    <string name="squad_friend_added">Friend added!</string>
+    <string name="squad_request_declined">Request declined</string>
+
+<!--    XML FILES:-->
+    <string name="chat_title_placeholder">Username</string>
+    <string name="chat_hint_type_message">Type a message...</string>
+
+    <string name="comments_hint_write">Write a comment...</string>
+
+    <string name="profile_setup_title">Complete your profile</string>
+    <string name="profile_setup_username_hint">Username</string>
+    <string name="profile_setup_pick_games">Pick up to 5 favorite games</string>
+
+    <string name="avatar_choose_title">Choose Avatar</string>
+
+    <string name="region_choose_title">Choose Region</string>
+
+    <string name="chat_list_title">Messages</string>
+    <string name="chat_list_search_hint">Search conversations...</string>
+
+    <string name="discover_title">Discover</string>
+    <string name="discover_subtitle">Find new gaming partners</string>
+    <string name="discover_search_hint">Search username...</string>
+    <string name="discover_favorite_game_hint">Favorite game</string>
+    <string name="discover_suggested_players">SUGGESTED PLAYERS</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="profile_stats_title">PLAYER STATS</string>
+    <string name="profile_fav_title">FAVORITE GAMES</string>
+    <string name="profile_label_region">Region</string>
+    <string name="profile_label_games">Games</string>
+    <string name="profile_no_favorite_games">No favorite games yet</string>
+
+    <string name="squad_title">Squad</string>
+    <string name="squad_tab_friends">Friends</string>
+    <string name="squad_tab_requests">Requests</string>
+
+    <string name="chat_last_message_placeholder">Last message...</string>
+    <string name="comment_time_placeholder">2 min ago</string>
+    <string name="comment_placeholder">comment...</string>
+
+    <string name="request_subtitle">Sent you a friend request</string>
+    <string name="content_desc_accept">Accept</string>
+    <string name="content_desc_decline">Decline</string>
+
+    <string name="game_name_placeholder">Game name</string>
+
+    <string name="chat_message_placeholder">Hello!</string>
+    <string name="chat_time_placeholder">12:45</string>
+
+    <string name="content_desc_like">Like</string>
+
+    <string name="post_text_placeholder">post text...</string>
+    <string name="count_zero">0</string>
+
+
+
+
+
+</resources>

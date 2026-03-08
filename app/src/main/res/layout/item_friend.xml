@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/chat_item_height"
+    android:layout_marginBottom="@dimen/default_card_margin"
+    android:background="@color/card_dark"
+    android:padding="@dimen/space_12">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_img_avatar"
+        android:layout_width="@dimen/friend_item_avatar_size"
+        android:layout_height="@dimen/friend_item_avatar_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_lbl_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/default_username"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_16"
+        android:layout_marginStart="@dimen/space_12"
+        app:layout_constraintStart_toEndOf="@id/item_img_avatar"
+        app:layout_constraintTop_toTopOf="@id/item_img_avatar"
+        app:layout_constraintEnd_toStartOf="@id/item_btn_chat"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_lbl_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chat_status_offline"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_subtitle"
+        android:layout_marginStart="@dimen/space_12"
+        app:layout_constraintStart_toEndOf="@id/item_img_avatar"
+        app:layout_constraintBottom_toBottomOf="@id/item_img_avatar"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_btn_chat"
+        android:layout_width="@dimen/profile_edit_size"
+        android:layout_height="@dimen/profile_edit_size"
+        android:src="@android:drawable/ic_menu_send"
+        android:padding="@dimen/profile_edit_padding"
+        android:background="@drawable/bg_circle_inner"
+        app:tint="@color/text_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

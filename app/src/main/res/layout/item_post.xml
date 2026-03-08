@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_card_margin"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="0dp"
+    app:strokeWidth="@dimen/stroke_thin"
+    app:strokeColor="@color/card_stroke_soft"
+    app:cardBackgroundColor="@color/card_dark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_14">
+
+        <ImageView
+            android:id="@+id/postImgAvatar"
+            android:layout_width="@dimen/post_avatar_size"
+            android:layout_height="@dimen/post_avatar_size"
+            android:src="@drawable/logo"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/postLblName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/default_username"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_16"
+            android:layout_marginStart="@dimen/default_card_margin"
+            app:layout_constraintStart_toEndOf="@+id/postImgAvatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/postImgAvatar" />
+
+        <TextView
+            android:id="@+id/postLblTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/comment_time_placeholder"
+            android:textColor="@color/text_white_60"
+            android:textSize="@dimen/text_subtitle"
+            android:layout_marginTop="@dimen/space_xs"
+            app:layout_constraintStart_toStartOf="@+id/postLblName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postLblName" />
+
+        <TextView
+            android:id="@+id/postLblText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/post_text_placeholder"
+            android:textColor="@color/text_white_90"
+            android:textSize="@dimen/text_14"
+            android:lineSpacingExtra="@dimen/line_spacing_small"
+            android:layout_marginTop="@dimen/default_card_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postImgAvatar" />
+
+        <LinearLayout
+            android:id="@+id/postActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/default_card_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postLblText">
+
+            <ImageButton
+                android:id="@+id/postBtnLike"
+                android:layout_width="@dimen/profile_edit_size"
+                android:layout_height="@dimen/profile_edit_size"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_like_outline"
+                android:contentDescription="@string/content_desc_like"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/postLblLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/count_zero"
+                android:textColor="@color/text_white_70"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_16"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/postBtnComments"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/profile_edit_size"
+                android:text="@string/comments_title" />
+
+            <TextView
+                android:id="@+id/postLblComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/count_zero"
+                android:textColor="@color/text_white_70"
+                android:layout_marginStart="@dimen/space_8"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

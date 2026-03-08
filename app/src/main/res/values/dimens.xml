@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_card_margin">10dp</dimen>
+    <dimen name="screen_padding">14dp</dimen>
+
+    <dimen name="space_xs">2dp</dimen>
+    <dimen name="space_s">4dp</dimen>
+    <dimen name="space_m">8dp</dimen>
+    <dimen name="space_l">10dp</dimen>
+    <dimen name="space_xl">12dp</dimen>
+
+    <dimen name="text_top">28sp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_subtitle">12sp</dimen>
+
+    <dimen name="chat_input_height">54dp</dimen>
+    <dimen name="send_btn_width">40dp</dimen>
+    <dimen name="send_btn_padding">8dp</dimen>
+
+    <dimen name="bottom_nav_min_height">64dp</dimen>
+
+    <dimen name="avatar_close_size">32dp</dimen>
+    <dimen name="avatar_close_padding">7dp</dimen>
+    <dimen name="avatar_grid_height">340dp</dimen>
+
+    <dimen name="space_3">3dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_6">6dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_14">14dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_18">18dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+
+    <dimen name="discover_search_height">50dp</dimen>
+    <dimen name="discover_dropdown_height">52dp</dimen>
+
+    <dimen name="clear_btn_size">48dp</dimen>
+    <dimen name="clear_btn_corner">14dp</dimen>
+    <dimen name="clear_btn_icon">22dp</dimen>
+
+    <dimen name="avatar_size">92dp</dimen>
+    <dimen name="avatar_stroke">1dp</dimen>
+    <dimen name="profile_edit_size">36dp</dimen>
+    <dimen name="profile_edit_padding">8dp</dimen>
+    <dimen name="profile_edit_offset">-6dp</dimen>
+    <dimen name="card_radius_l">18dp</dimen>
+    <dimen name="card_radius_m">14dp</dimen>
+    <dimen name="stats_item_min_height">78dp</dimen>
+    <dimen name="icon_stat_size">30dp</dimen>
+    <dimen name="icon_stat_padding">6dp</dimen>
+    <dimen name="fav_edit_size">28dp</dimen>
+    <dimen name="fav_edit_padding">6dp</dimen>
+    <dimen name="chip_spacing">10dp</dimen>
+    <dimen name="text_signOut">15sp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_11">11sp</dimen>
+    <dimen name="text_13">13sp</dimen>
+    <dimen name="text_15">15sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+
+    <dimen name="tabs_height">44dp</dimen>
+    <dimen name="badge_size">18dp</dimen>
+    <dimen name="tab_corner_radius">14dp</dimen>
+
+    <dimen name="avatar_item_size">64dp</dimen>
+
+    <dimen name="chat_item_height">72dp</dimen>
+    <dimen name="chat_avatar_size">48dp</dimen>
+    <dimen name="chat_badge_size">22dp</dimen>
+
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="stroke_thin">1dp</dimen>
+    <dimen name="comment_avatar_size">40dp</dimen>
+    <dimen name="line_spacing_small">3dp</dimen>
+
+    <dimen name="discover_item_avatar_size">50dp</dimen>
+    <dimen name="btn_radius_m">12dp</dimen>
+
+    <dimen name="friend_item_avatar_size">46dp</dimen>
+
+    <dimen name="request_action_size">44dp</dimen>
+
+    <dimen name="post_avatar_size">44dp</dimen>
+
+
+</resources>

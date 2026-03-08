@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="regions_catalog">
+        <item>EU West</item>
+        <item>EU Central</item>
+        <item>NA East</item>
+        <item>NA West</item>
+        <item>South America</item>
+        <item>Asia</item>
+        <item>Middle East</item>
+        <item>Oceania</item>
+        <item>Africa</item>
+    </string-array>
+</resources>

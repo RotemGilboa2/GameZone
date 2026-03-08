@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/chat_item_height"
+    android:padding="@dimen/default_card_margin">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_chat_avatar"
+        android:layout_width="@dimen/chat_avatar_size"
+        android:layout_height="@dimen/chat_avatar_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_chat_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/default_username"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_16"
+        android:layout_marginStart="@dimen/space_12"
+        app:layout_constraintStart_toEndOf="@id/item_chat_avatar"
+        app:layout_constraintTop_toTopOf="@id/item_chat_avatar"
+        app:layout_constraintEnd_toStartOf="@id/item_chat_time"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_chat_last"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/chat_last_message_placeholder"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_13"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="@id/item_chat_name"
+        app:layout_constraintTop_toBottomOf="@id/item_chat_name"
+        app:layout_constraintEnd_toStartOf="@id/item_chat_badge"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_11"
+        app:layout_constraintTop_toTopOf="@id/item_chat_name"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_chat_badge"
+        android:layout_width="@dimen/chat_badge_size"
+        android:layout_height="@dimen/chat_badge_size"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_11"
+        android:visibility="gone"
+        android:background="@drawable/bg_circle_edit"
+        android:layout_marginTop="@dimen/space_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_chat_time"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

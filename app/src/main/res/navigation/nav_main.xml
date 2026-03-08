@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.gamezone.ui.home.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.example.gamezone.ui.discover.DiscoverFragment"
+        android:label="Discover" />
+
+    <fragment
+        android:id="@+id/squadFragment"
+        android:name="com.example.gamezone.ui.squad.SquadFragment"
+        android:label="Squad" />
+
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.example.gamezone.ui.chat.ChatListFragment"
+        android:label="Chat" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.gamezone.ui.profile.ProfileFragment"
+        android:label="Profile" />
+</navigation>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="@dimen/space_18">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profile_lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_title"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_top"
+        android:textColor="@color/text_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/profile_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profile_lbl_title"
+        app:layout_constraintBottom_toTopOf="@id/profile_btn_logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/profile_btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_out"
+        android:textSize="@dimen/text_signOut"
+        android:textColor="@color/danger_red"
+        android:textStyle="bold"
+        android:padding="@dimen/profile_edit_padding"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/profile_scroll"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/profile_lbl_title"
+        app:layout_constraintBottom_toTopOf="@id/profile_btn_logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_img_avatar"
+                android:layout_width="@dimen/avatar_size"
+                android:layout_height="@dimen/avatar_size"
+                android:layout_marginTop="@dimen/space_18"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo"
+                app:strokeColor="@color/nav_selected"
+                app:strokeWidth="@dimen/avatar_stroke"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_btn_edit"
+                android:layout_width="@dimen/profile_edit_size"
+                android:layout_height="@dimen/profile_edit_size"
+                android:padding="@dimen/profile_edit_padding"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="@color/white"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="10dp"
+                app:layout_constraintEnd_toEndOf="@id/profile_img_avatar"
+                app:layout_constraintTop_toTopOf="@id/profile_img_avatar"
+                android:layout_marginEnd="@dimen/profile_edit_offset"
+                android:layout_marginTop="@dimen/profile_edit_offset"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/profile_lbl_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/default_username"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_24"
+                android:textColor="@color/text_primary"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/space_12"
+                app:layout_constraintTop_toBottomOf="@id/profile_img_avatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profile_card_stats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                app:cardCornerRadius="@dimen/card_radius_l"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/card_dark"
+                app:layout_constraintTop_toBottomOf="@id/profile_lbl_username"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_16">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_stats_title"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/text_subtitle"
+                        android:letterSpacing="0.08"
+                        android:textColor="@color/text_muted" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/space_12">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/profile_card_region"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:minHeight="@dimen/stats_item_min_height"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:cardCornerRadius="@dimen/card_radius_m"
+                            app:cardBackgroundColor="@color/card_inner"
+                            app:cardUseCompatPadding="false">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/default_card_margin"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="@dimen/icon_stat_size"
+                                    android:layout_height="@dimen/icon_stat_size"
+                                    android:padding="@dimen/icon_stat_padding"
+                                    android:background="@drawable/bg_circle_inner"
+                                    android:src="@android:drawable/ic_menu_compass"
+                                    app:tint="@color/text_primary"/>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/profile_lbl_region_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/icon_stat_padding"
+                                    android:text="EU West"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_14"
+                                    android:textColor="@color/text_primary"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"/>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/space_xs"
+                                    android:text="@string/profile_label_region"
+                                    android:textSize="@dimen/text_11"
+                                    android:textColor="@color/text_muted"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Space
+                            android:layout_width="@dimen/space_12"
+                            android:layout_height="@dimen/avatar_stroke" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/profile_card_gamesCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:minHeight="@dimen/stats_item_min_height"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:cardCornerRadius="@dimen/card_radius_m"
+                            app:cardBackgroundColor="@color/card_inner"
+                            app:cardUseCompatPadding="false">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/default_card_margin"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="@dimen/icon_stat_size"
+                                    android:layout_height="@dimen/icon_stat_size"
+                                    android:background="@drawable/bg_circle_inner"
+                                    android:gravity="center"
+                                    android:text="🎮"
+                                    android:textSize="@dimen/text_16" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/profile_lbl_games_value"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/icon_stat_padding"
+                                    android:text="1284"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/text_14"
+                                    android:textColor="@color/text_primary"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"/>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/space_xs"
+                                    android:text="@string/profile_label_games"
+                                    android:textSize="@dimen/text_11"
+                                    android:textColor="@color/text_muted"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profile_card_fav"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                app:cardCornerRadius="@dimen/card_radius_l"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/card_dark"
+                app:layout_constraintTop_toBottomOf="@id/profile_card_stats"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_16"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/profile_fav_title"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/text_subtitle"
+                            android:letterSpacing="0.08"
+                            android:textColor="@color/text_muted" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/profile_btn_edit_fav"
+                            android:layout_width="@dimen/fav_edit_size"
+                            android:layout_height="@dimen/fav_edit_size"
+                            android:padding="@dimen/fav_edit_padding"
+                            android:background="@drawable/bg_circle_inner"
+                            android:src="@android:drawable/ic_menu_edit"
+                            app:tint="@color/text_muted"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/profile_chip_group_fav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_14"
+                        app:chipSpacingHorizontal="@dimen/chip_spacing"
+                        app:chipSpacingVertical="@dimen/chip_spacing"
+                        app:singleLine="false" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/profile_lbl_no_fav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profile_no_favorite_games"
+                        android:textColor="@color/text_muted"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

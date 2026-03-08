@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="games_catalog">
+        <item>Valorant</item>
+        <item>Fortnite</item>
+        <item>Apex Legends</item>
+        <item>League of Legends</item>
+        <item>CS2</item>
+        <item>Overwatch 2</item>
+        <item>Call of Duty: Warzone</item>
+        <item>Minecraft</item>
+        <item>GTA V</item>
+        <item>FIFA 26</item>
+        <item>Rocket League</item>
+        <item>Rainbow Six Siege</item>
+        <item>Among Us</item>
+        <item>Dota 2</item>
+        <item>PUBG</item>
+        <item>Roblox</item>
+    </string-array>
+</resources>
