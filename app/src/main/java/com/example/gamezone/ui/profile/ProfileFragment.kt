@@ -132,27 +132,16 @@ class ProfileFragment : Fragment() {
         }
 
         games.forEach { game ->
-            val chip = Chip(requireContext()).apply {
-                text = game
-                isClickable = false
-                isCheckable = false
+            // מנפח את העיצוב מקובץ ה-XML ישירות לתוך קבוצת הצ'יפים
+            val chip = layoutInflater.inflate(R.layout.item_profile_chip, binding.profileChipGroupFav, false) as Chip
 
-                setTextColor(resources.getColor(R.color.text_primary, null))
-                chipBackgroundColor = resources.getColorStateList(R.color.card_inner, null)
-                chipStrokeWidth = 1f
-                chipStrokeColor = resources.getColorStateList(R.color.nav_selected, null)
-
-                shapeAppearanceModel = shapeAppearanceModel.toBuilder()
-                    .setAllCornerSizes(999f)
-                    .build()
-
-                textSize = 13f
-                setPadding(8, 6, 8, 6)
-            }
+            // רק מכניס את הטקסט של המשחק
+            chip.text = game
 
             binding.profileChipGroupFav.addView(chip)
         }
     }
+
     // דיאלוג לבחירת המשחקים המועדפים עם הגבלה עד 5
     private fun showFavoriteGamesDialog() {
         val uid = auth.currentUser?.uid ?: return
@@ -249,7 +238,7 @@ class ProfileFragment : Fragment() {
         binding.profileImgAvatar.setImageResource(if (resId != 0) resId else R.drawable.logo)
     }
 
-    // התנתקות: מסמן אופחיין, עושה התנתקות דרך FB UI ומעביר למסך לוגין ומנקה backstack
+    // התנתקות: מסמן אופליין, עושה התנתקות דרך FB UI ומעביר למסך לוגין ומנקה backstack
     private fun signOutUser() {
         // חייב להיות מיידי לפני שמאבדים את uid
         FirestorePresence.setOfflineNow()
